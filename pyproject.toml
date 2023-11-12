@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "python-api"
+version = "0.1.0"
+description = ""
+authors = ["Arthur Zopellaro <github@zope.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = "^0.25.1"
+litestar = {extras = ["standard"], version = "^2.3.2"}
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.5"
+mypy = "^1.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+select = [
+    "F", "E", "W", "C90", "I", "N", "D", "UP", "YTT", "ANN", "ASYNC", "S", "BLE", "FBT", "B", "A", "COM", "C4", "DTZ",
+    "T10", "DJ", "EM", "EXE", "FA", "ISC", "ICN", "G", "INP", "PIE", "T20", "PYI", "PT", "Q", "RSE", "RET", "SLF",
+    "SLOT", "SIM", "TID", "TCH", "INT", "ARG", "PTH", "TD", "FIX", "ERA", "PD", "PGH", "PL", "TRY", "FLY", "NPY", "AIR",
+    "PERF", "RUF",
+]
+ignore = ["D203", "D213", "FA102"]
+line-length = 120
